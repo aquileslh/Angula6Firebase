@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Observable } from 'rxjs';
-import { AngularFirestore } from '@angular/fire/firestore';
+import { AngularFirestore,  AngularFirestoreCollection} from '@angular/fire/firestore';
 
 @Component({
   selector: 'app-root',
@@ -8,8 +8,17 @@ import { AngularFirestore } from '@angular/fire/firestore';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  
+  private itemsCollection: AngularFirestoreCollection<any>;
   items: Observable<any[]>;
-  constructor(db: AngularFirestore) {
-    this.items = db.collection('items').valueChanges();
+  constructor(private afs: AngularFirestore) {
+    this.itemsCollection = afs.collection<any>('tienda');
+    this.itemsCollection.valueChanges().forEach(item => console.log(item));
+
   }
-}
+
+  addItem(item: any) {
+    this.itemsCollection.add(item);
+  }
+
+  }

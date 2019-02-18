@@ -5,12 +5,12 @@
 export const environment = {
   production: false,
   firebase: {
-    apiKey: 'AIzaSyD7IS6hAGQwu4hmfkWGF0nAJocPpBKNYUI',
-    authDomain: 'alhadminschool.firebaseapp.com',
-    databaseURL: 'https://alhadminschool.firebaseio.com',
-    projectId: 'alhadminschool',
-    storageBucket: 'alhadminschool.appspot.com',
-    messagingSenderId: '915605023273'
+    apiKey: "AIzaSyD7IS6hAGQwu4hmfkWGF0nAJocPpBKNYUI",
+    authDomain: "alhadminschool.firebaseapp.com",
+    databaseURL: "https://alhadminschool.firebaseio.com",
+    projectId: "alhadminschool",
+    storageBucket: "alhadminschool.appspot.com",
+    messagingSenderId: "915605023273"
   }
 };
 

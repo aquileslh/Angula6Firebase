@@ -13,7 +13,7 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
   ],
   imports: [
     BrowserModule,
-    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireModule.initializeApp(environment.firebase, 'adminSchool'),
     AngularFirestoreModule
   ],
   providers: [],
